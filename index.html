@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth scroll-pt-28">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClearPath Credit Solutions</title>
+    <meta name="description" content="Professional credit repair services to help you dispute inaccuracies and achieve financial freedom." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#2563EB',   /* Blue 600 - Modern, Trustworthy */
+              primaryDark: '#1D4ED8', /* Blue 700 - Hover states */
+              secondary: '#F59E0B', /* Amber 500 - Warm, Actionable (Complementary) */
+              dark: '#0F172A',      /* Slate 900 - Deep, Professional */
+              light: '#F8FAFC',     /* Slate 50 - Clean surface */
+              slate: {
+                850: '#1e293b',
+              }
+            },
+            fontFamily: {
+              sans: ['Plus Jakarta Sans', 'sans-serif'],
+            },
+            fontWeight: {
+              regular: '400',
+              medium: '500',
+              semibold: '600',
+              bold: '700',
+              extrabold: '800',
+            },
+            container: {
+              center: true,
+              padding: '1.5rem',
+              screens: {
+                xl: '1280px',
+              },
+            },
+            animation: {
+              'marquee': 'marquee 40s linear infinite',
+              'fade-in': 'fadeIn 0.5s ease-out forwards',
+            },
+            keyframes: {
+              marquee: {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-50%)' },
+              },
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'translateY(10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --primary: #2563EB;
+        --secondary: #F59E0B;
+        --dark: #0F172A;
+      }
+
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      /* Global Layout Container Enforcer */
+      .layout-container {
+        width: 100%;
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1.5rem; /* 24px mobile */
+        padding-right: 1.5rem;
+      }
+
+      @media (min-width: 1024px) {
+        .layout-container {
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+        }
+      }
+
+      /* Consistent Section Spacing */
+      .section-spacing {
+        padding-top: 5rem;    /* 80px */
+        padding-bottom: 5rem; /* 80px */
+      }
+      
+      @media (max-width: 768px) {
+        .section-spacing {
+          padding-top: 3rem;
+          padding-bottom: 3rem;
+        }
+      }
+
+      /* Accessibility Focus States */
+      *:focus-visible {
+        outline: 2px solid var(--primary);
+        outline-offset: 2px;
+      }
+
+      /* Micro-interactions */
+      .hover-lift {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .hover-lift:hover {
+        transform: translateY(-2px);
+      }
+      
+      /* Utilities */
+      .text-balance {
+        text-wrap: balance;
+      }
+
+      /* Prevent horizontal scroll from animations */
+      body {
+        overflow-x: hidden;
+      }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react/": "https://esm.sh/react@18.2.0/",
+    "react-dom": "https://esm.sh/react-dom@18.2.0",
+    "react-dom/": "https://esm.sh/react-dom@18.2.0/",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "lucide-react": "https://esm.sh/lucide-react@0.344.0?external=react,react-dom"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-light text-slate-800 antialiased selection:bg-secondary selection:text-white flex flex-col min-h-screen">
+    <div id="root" class="flex-grow"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
