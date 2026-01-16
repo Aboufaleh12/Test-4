@@ -84,7 +84,7 @@ const Hero: React.FC = () => {
 
                     <div className="flex flex-col sm:flex-row items-center gap-3 md:gap-4 w-full sm:w-auto mb-10 md:mb-12 animate-fade-in opacity-0 [animation-delay:400ms] [animation-fill-mode:forwards]">
                         <a
-                            href="#contact"
+                            href="tel:+19999999999"
                             className="w-full sm:w-auto px-8 py-4 md:px-10 md:py-5 bg-primary hover:bg-primaryDark text-white rounded-2xl font-bold text-base md:text-lg transition-all shadow-[0_0_30px_rgba(37,99,235,0.4)] hover:shadow-[0_0_40px_rgba(37,99,235,0.6)] hover:-translate-y-1.5 flex items-center justify-center gap-2 relative overflow-hidden group"
                         >
                             <span className="relative z-10">Start My Analysis</span>
@@ -92,7 +92,9 @@ const Hero: React.FC = () => {
                             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-[marquee_2s_linear_infinite]"></div>
                         </a>
                         <a
-                            href="tel:+19999999999"
+                            href="https://calendly.com/aboufaleh3you/30min"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="w-full sm:w-auto px-8 py-4 md:px-10 md:py-5 bg-white/5 hover:bg-white/10 border border-white/10 text-white rounded-2xl font-semibold text-base md:text-lg transition-all backdrop-blur-md flex items-center justify-center gap-2 hover:-translate-y-1.5"
                         >
                             <Calendar className="w-5 h-5 text-blue-400" />
