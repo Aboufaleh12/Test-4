@@ -102,30 +102,42 @@ const Hero: React.FC = () => {
                         </a>
                     </div>
 
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-6 border-t border-white/5 pt-8 w-full animate-fade-in opacity-0 [animation-delay:500ms] [animation-fill-mode:forwards]">
-                        <div className="flex items-center gap-3 group">
-                            <div className="p-2 rounded-lg bg-emerald-500/5 border border-emerald-500/10 group-hover:bg-emerald-500/10 transition-colors">
-                                <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+                    {/* Open-Air Trust Row */}
+                    <div className="w-full border-t border-white/5 pt-8 animate-fade-in opacity-0 [animation-delay:500ms] [animation-fill-mode:forwards]">
+                        <div className="flex flex-wrap justify-center md:justify-between items-center gap-y-4 gap-x-6">
+
+                            {/* Item 1 */}
+                            <div className="flex items-center gap-3 group">
+                                <CheckCircle2 className="w-5 h-5 text-emerald-500" />
+                                <span className="text-slate-300 text-sm font-medium tracking-wide">No Results, No Fee</span>
                             </div>
-                            <span className="text-slate-400 text-xs font-bold uppercase tracking-wider">No Results, No Fee</span>
-                        </div>
-                        <div className="flex items-center gap-3 group">
-                            <div className="p-2 rounded-lg bg-blue-500/5 border border-blue-500/10 group-hover:bg-blue-500/10 transition-colors">
-                                <ShieldCheck className="w-4 h-4 text-blue-500" />
+
+                            {/* Divider */}
+                            <div className="h-4 w-px bg-white/10 hidden sm:block"></div>
+
+                            {/* Item 2 */}
+                            <div className="flex items-center gap-3 group">
+                                <ShieldCheck className="w-5 h-5 text-blue-500" />
+                                <span className="text-slate-300 text-sm font-medium tracking-wide">FCRA Compliant</span>
                             </div>
-                            <span className="text-slate-400 text-xs font-bold uppercase tracking-wider">FCRA Compliant</span>
-                        </div>
-                        <div className="flex items-center gap-3 group">
-                            <div className="p-2 rounded-lg bg-amber-500/5 border border-amber-500/10 group-hover:bg-amber-500/10 transition-colors">
-                                <Zap className="w-4 h-4 text-amber-500" />
+
+                            {/* Divider */}
+                            <div className="h-4 w-px bg-white/10 hidden md:block"></div>
+
+                            {/* Item 3 */}
+                            <div className="flex items-center gap-3 group">
+                                <Zap className="w-5 h-5 text-amber-500" />
+                                <span className="text-slate-300 text-sm font-medium tracking-wide">Fast Disputes</span>
                             </div>
-                            <span className="text-slate-400 text-xs font-bold uppercase tracking-wider">Fast Disputes</span>
-                        </div>
-                        <div className="flex items-center gap-3 group">
-                            <div className="p-2 rounded-lg bg-purple-500/5 border border-purple-500/10 group-hover:bg-purple-500/10 transition-colors">
-                                <TrendingUp className="w-4 h-4 text-purple-500" />
+
+                            {/* Divider */}
+                            <div className="h-4 w-px bg-white/10 hidden sm:block"></div>
+
+                            {/* Item 4 */}
+                            <div className="flex items-center gap-3 group">
+                                <TrendingUp className="w-5 h-5 text-purple-500" />
+                                <span className="text-slate-300 text-sm font-medium tracking-wide">Score Tracking</span>
                             </div>
-                            <span className="text-slate-400 text-xs font-bold uppercase tracking-wider">Score Tracking</span>
                         </div>
                     </div>
                 </div>
