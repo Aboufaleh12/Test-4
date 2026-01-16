@@ -64,8 +64,8 @@ const Navbar: React.FC = () => {
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 border-b ${scrolled
-          ? 'bg-slate-900 md:bg-dark/80 backdrop-blur-xl border-white/5 py-4 shadow-lg'
-          : 'bg-transparent border-transparent py-4 md:py-6'
+        ? 'bg-slate-900 md:bg-dark/80 backdrop-blur-xl border-white/5 py-4 shadow-lg'
+        : 'bg-transparent border-transparent py-4 md:py-6'
         }`}
     >
       <div className="layout-container flex justify-between items-center">
@@ -128,11 +128,11 @@ const Navbar: React.FC = () => {
 
       {/* Modern Premium Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 bg-[#0F172A] z-40 transition-all duration-500 md:hidden flex flex-col ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
+        className={`fixed inset-0 bg-slate-900/98 backdrop-blur-xl z-40 transition-all duration-500 md:hidden flex flex-col ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
           }`}
       >
-        {/* Radial Gradient Background */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-blue-900/20 via-slate-900/0 to-slate-900/0 pointer-events-none"></div>
+        {/* Radial Gradient Background - Simplified */}
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-900 to-slate-800 pointer-events-none opacity-50"></div>
 
         <div className="layout-container flex flex-col h-full relative z-10 pt-28 pb-8">
 
@@ -151,7 +151,7 @@ const Navbar: React.FC = () => {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className={`text-3xl font-bold tracking-tight py-2 transition-all duration-500 ease-out flex items-center gap-4 ${activeSection === link.href.substring(1) ? 'text-secondary translate-x-4' : 'text-slate-300 hover:text-white hover:translate-x-2'
+                className={`text-3xl font-bold tracking-tight py-2 transition-all duration-500 ease-out flex items-center gap-4 ${activeSection === link.href.substring(1) ? 'text-secondary translate-x-4' : 'text-white hover:text-secondary hover:translate-x-2'
                   } ${isOpen ? 'translate-x-0 opacity-100' : '-translate-x-8 opacity-0'}`}
                 style={{ transitionDelay: `${100 + (idx * 50)}ms` }}
               >
