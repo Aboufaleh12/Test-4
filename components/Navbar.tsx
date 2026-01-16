@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
           }
         });
       },
-      { rootMargin: '-30% 0px -30% 0px' } 
+      { rootMargin: '-30% 0px -30% 0px' }
     );
 
     const sections = document.querySelectorAll('section[id]');
@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
     e.preventDefault();
     const targetId = href.replace('#', '');
     const element = document.getElementById(targetId);
-    
+
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -62,18 +62,17 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav 
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 border-b ${
-        scrolled 
-          ? 'bg-dark/80 backdrop-blur-xl border-white/5 py-4 shadow-lg' 
-          : 'bg-transparent border-transparent py-6'
-      }`}
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 border-b ${scrolled
+          ? 'bg-dark/80 backdrop-blur-xl border-white/5 py-4 shadow-lg'
+          : 'bg-transparent border-transparent py-4 md:py-6'
+        }`}
     >
       <div className="layout-container flex justify-between items-center">
-        
+
         {/* Logo */}
-        <a 
-          href="#" 
+        <a
+          href="#"
           onClick={handleLogoClick}
           className="flex items-center gap-2 group relative z-50"
         >
@@ -88,15 +87,14 @@ const Navbar: React.FC = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-1 bg-white/5 backdrop-blur-sm px-2 py-1.5 rounded-full border border-white/5">
           {NAV_LINKS.map((link) => (
-            <a 
-              key={link.name} 
+            <a
+              key={link.name}
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
-              className={`px-5 py-2 text-sm font-medium rounded-full transition-all duration-300 ${
-                activeSection === link.href.substring(1)
+              className={`px-5 py-2 text-sm font-medium rounded-full transition-all duration-300 ${activeSection === link.href.substring(1)
                   ? 'bg-white/10 text-white'
                   : 'text-slate-300 hover:text-white hover:bg-white/5'
-              }`}
+                }`}
             >
               {link.name}
             </a>
@@ -105,18 +103,18 @@ const Navbar: React.FC = () => {
 
         {/* CTA Button */}
         <div className="hidden md:flex items-center gap-4">
-            <a 
-                href="tel:+19999999999" 
-                className="group relative px-6 py-2.5 rounded-full bg-secondary text-slate-900 font-bold text-sm transition-all hover:shadow-lg hover:-translate-y-0.5 flex items-center gap-2"
-            >
-                <Phone className="w-4 h-4" />
-                <span>+1 999-999-9999</span>
-            </a>
+          <a
+            href="tel:+19999999999"
+            className="group relative px-6 py-2.5 rounded-full bg-secondary text-slate-900 font-bold text-sm transition-all hover:shadow-lg hover:-translate-y-0.5 flex items-center gap-2"
+          >
+            <Phone className="w-4 h-4" />
+            <span>+1 999-999-9999</span>
+          </a>
         </div>
 
-        {/* Mobile Toggle */}
-        <button 
-          className="md:hidden text-white p-2 relative z-50 hover:bg-white/10 rounded-full"
+        {/* Mobile Toggle - Refined & Fixed */}
+        <button
+          className="md:hidden text-white p-2.5 relative z-[60] bg-white/10 backdrop-blur-md border border-white/10 rounded-full active:scale-95 transition-all"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
@@ -125,32 +123,30 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Mobile Menu Overlay */}
-      <div 
-        className={`fixed inset-0 bg-dark/95 backdrop-blur-xl z-40 transition-all duration-500 md:hidden flex flex-col items-center justify-center gap-8 ${
-          isOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
-        }`}
+      <div
+        className={`fixed inset-0 bg-dark/95 backdrop-blur-xl z-40 transition-all duration-500 md:hidden flex flex-col items-center justify-center gap-8 ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
+          }`}
       >
-         {NAV_LINKS.map((link, idx) => (
-            <a 
-              key={link.name} 
-              href={link.href}
-              onClick={(e) => handleNavClick(e, link.href)}
-              className={`text-2xl font-bold transition-all ${
-                activeSection === link.href.substring(1) ? 'text-secondary scale-110' : 'text-white hover:text-secondary'
+        {NAV_LINKS.map((link, idx) => (
+          <a
+            key={link.name}
+            href={link.href}
+            onClick={(e) => handleNavClick(e, link.href)}
+            className={`text-2xl font-bold transition-all ${activeSection === link.href.substring(1) ? 'text-secondary scale-110' : 'text-white hover:text-secondary'
               } ${isOpen ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}
-              style={{ transitionDelay: `${idx * 75}ms` }}
-            >
-              {link.name}
-            </a>
-          ))}
-          <a 
-            href="tel:+19999999999" 
-            className={`mt-4 px-8 py-4 bg-secondary text-slate-900 text-lg font-bold rounded-full flex items-center gap-2 ${isOpen ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}
-            style={{ transitionDelay: '500ms' }}
+            style={{ transitionDelay: `${idx * 75}ms` }}
           >
-            <Phone className="w-5 h-5" />
-            +1 999-999-9999
+            {link.name}
           </a>
+        ))}
+        <a
+          href="tel:+19999999999"
+          className={`mt-4 px-8 py-4 bg-secondary text-slate-900 text-lg font-bold rounded-full flex items-center gap-2 ${isOpen ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}
+          style={{ transitionDelay: '500ms' }}
+        >
+          <Phone className="w-5 h-5" />
+          +1 999-999-9999
+        </a>
       </div>
     </nav>
   );
