@@ -61,7 +61,7 @@ const Hero: React.FC = () => {
                                     className="w-full h-full object-cover"
                                 />
                                 {/* Mobile Credit Score Badge Overlay */}
-                                <div className="absolute bottom-4 left-4 bg-white/10 backdrop-blur-md border border-white/10 px-4 py-2 rounded-xl flex items-center gap-3">
+                                <div className="absolute bottom-4 left-4 bg-slate-900/80 backdrop-blur-md border border-white/10 px-4 py-2 rounded-xl flex items-center gap-3">
                                     <div className="relative w-10 h-10 flex items-center justify-center">
                                         <svg className="w-full h-full -rotate-90" viewBox="0 0 100 100">
                                             <circle className="text-white/10" strokeWidth="8" stroke="currentColor" fill="transparent" r="40" cx="50" cy="50" />
