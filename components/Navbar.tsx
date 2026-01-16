@@ -64,7 +64,7 @@ const Navbar: React.FC = () => {
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 border-b ${scrolled
-          ? 'bg-dark/80 backdrop-blur-xl border-white/5 py-4 shadow-lg'
+          ? 'bg-slate-900 md:bg-dark/80 backdrop-blur-xl border-white/5 py-4 shadow-lg'
           : 'bg-transparent border-transparent py-4 md:py-6'
         }`}
     >
@@ -92,8 +92,8 @@ const Navbar: React.FC = () => {
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
               className={`px-5 py-2 text-sm font-medium rounded-full transition-all duration-300 ${activeSection === link.href.substring(1)
-                  ? 'bg-white/10 text-white'
-                  : 'text-slate-300 hover:text-white hover:bg-white/5'
+                ? 'bg-white/10 text-white'
+                : 'text-slate-300 hover:text-white hover:bg-white/5'
                 }`}
             >
               {link.name}
