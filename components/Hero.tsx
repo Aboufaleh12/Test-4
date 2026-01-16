@@ -26,6 +26,7 @@ const Hero: React.FC = () => {
                 <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
 
                     {/* Trust Badge */}
+                    {/* Trust Badge */}
                     <div className="animate-fade-in opacity-0 [animation-delay:100ms] [animation-fill-mode:forwards] mb-6 md:mb-8">
                         <div className="inline-flex items-center gap-2 md:gap-3 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-xl shadow-2xl group cursor-default hover:bg-white/10 transition-colors">
                             <div className="flex -space-x-2">
@@ -36,11 +37,19 @@ const Hero: React.FC = () => {
                             <div className="h-3 md:h-4 w-px bg-white/10 mx-1"></div>
                             <div className="flex items-center gap-1.5">
                                 <div className="flex gap-0.5">
+                                    <div className="p-1 bg-[#00b67a] rounded-[2px] mr-1">
+                                        <Star className="w-3 h-3 text-white fill-white" />
+                                    </div>
+                                    <span className="text-white text-[11px] md:text-xs font-bold tracking-wide">Excellent</span>
+                                </div>
+                                <div className="flex gap-0.5 ml-1">
                                     {[1, 2, 3, 4, 5].map(i => (
-                                        <Star key={i} className="w-3 h-3 md:w-3.5 md:h-3.5 text-amber-400 fill-amber-400" />
+                                        <div key={i} className="bg-[#00b67a] p-0.5">
+                                            <Star className="w-2 h-2 text-white fill-white" />
+                                        </div>
                                     ))}
                                 </div>
-                                <span className="text-slate-300 text-[10px] md:text-[11px] font-bold tracking-widest uppercase">4.9/5 TrustScore</span>
+                                <span className="text-slate-400 text-[10px] ml-1">4.9/5</span>
                             </div>
                         </div>
                     </div>
