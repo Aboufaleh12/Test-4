@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import { CheckCircle2, Lock, ShieldCheck, ArrowRight, Sparkles, MessageSquare } from 'lucide-react';
+import React from 'react';
+import { CheckCircle2, Lock, ShieldCheck, ArrowRight, Sparkles } from 'lucide-react';
 
 
 const Contact: React.FC = () => {
-  // const [isChatOpen, setIsChatOpen] = useState(false); // Removed Chat Bot
 
   return (
     <section id="contact" className="section-spacing bg-white relative overflow-hidden">
