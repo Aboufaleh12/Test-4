@@ -103,41 +103,29 @@ const Hero: React.FC = () => {
                     </div>
 
                     {/* Open-Air Trust Row */}
+                    {/* Open-Air Trust Row (Simplified) */}
                     <div className="w-full border-t border-white/5 pt-8 animate-fade-in opacity-0 [animation-delay:500ms] [animation-fill-mode:forwards]">
-                        <div className="flex flex-wrap justify-center md:justify-between items-center gap-y-4 gap-x-6">
+                        <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-4">
 
-                            {/* Item 1 */}
+                            {/* Item 1: Risk Reversal */}
                             <div className="flex items-center gap-3 group">
-                                <CheckCircle2 className="w-5 h-5 text-emerald-500" />
+                                <div className="p-2 rounded-full bg-emerald-500/10 group-hover:bg-emerald-500/20 transition-colors">
+                                    <CheckCircle2 className="w-5 h-5 text-emerald-500" />
+                                </div>
                                 <span className="text-slate-300 text-sm font-medium tracking-wide">No Results, No Fee</span>
                             </div>
 
                             {/* Divider */}
-                            <div className="h-4 w-px bg-white/10 hidden sm:block"></div>
+                            <div className="h-8 w-px bg-white/10 hidden sm:block"></div>
 
-                            {/* Item 2 */}
+                            {/* Item 2: Speed / Action */}
                             <div className="flex items-center gap-3 group">
-                                <ShieldCheck className="w-5 h-5 text-blue-500" />
-                                <span className="text-slate-300 text-sm font-medium tracking-wide">FCRA Compliant</span>
-                            </div>
-
-                            {/* Divider */}
-                            <div className="h-4 w-px bg-white/10 hidden md:block"></div>
-
-                            {/* Item 3 */}
-                            <div className="flex items-center gap-3 group">
-                                <Zap className="w-5 h-5 text-amber-500" />
+                                <div className="p-2 rounded-full bg-blue-500/10 group-hover:bg-blue-500/20 transition-colors">
+                                    <Zap className="w-5 h-5 text-blue-500" />
+                                </div>
                                 <span className="text-slate-300 text-sm font-medium tracking-wide">Fast Disputes</span>
                             </div>
 
-                            {/* Divider */}
-                            <div className="h-4 w-px bg-white/10 hidden sm:block"></div>
-
-                            {/* Item 4 */}
-                            <div className="flex items-center gap-3 group">
-                                <TrendingUp className="w-5 h-5 text-purple-500" />
-                                <span className="text-slate-300 text-sm font-medium tracking-wide">Score Tracking</span>
-                            </div>
                         </div>
                     </div>
                 </div>
