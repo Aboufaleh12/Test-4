@@ -50,6 +50,34 @@ const Hero: React.FC = () => {
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-300 to-emerald-400 drop-shadow-sm">Limitless Future.</span>
                     </h1>
 
+                    {/* Mobile-Only Hero Image (Interleaved) */}
+                    <div className="w-full relative mb-8 lg:hidden animate-fade-in opacity-0 [animation-delay:250ms] [animation-fill-mode:forwards]">
+                        <div className="relative group perspective-1000">
+                            <div className="absolute -inset-1 bg-gradient-to-tr from-blue-600/30 to-emerald-400/30 rounded-[2rem] blur-lg opacity-70"></div>
+                            <div className="relative rounded-[1.5rem] overflow-hidden shadow-2xl bg-slate-900 aspect-[4/3] border border-white/10">
+                                <img
+                                    src="/assets/hero-family.jpg"
+                                    alt="Professional family success"
+                                    className="w-full h-full object-cover"
+                                />
+                                {/* Mobile Credit Score Badge Overlay */}
+                                <div className="absolute bottom-4 left-4 bg-white/10 backdrop-blur-md border border-white/10 px-4 py-2 rounded-xl flex items-center gap-3">
+                                    <div className="relative w-10 h-10 flex items-center justify-center">
+                                        <svg className="w-full h-full -rotate-90" viewBox="0 0 100 100">
+                                            <circle className="text-white/10" strokeWidth="8" stroke="currentColor" fill="transparent" r="40" cx="50" cy="50" />
+                                            <circle className="text-emerald-500" strokeWidth="8" strokeDasharray="251" strokeDashoffset="50" strokeLinecap="round" stroke="currentColor" fill="transparent" r="40" cx="50" cy="50" />
+                                        </svg>
+                                        <span className="absolute text-sm font-black text-white">710</span>
+                                    </div>
+                                    <div className="flex flex-col">
+                                        <span className="text-xs font-bold text-white">Score Up</span>
+                                        <span className="text-[10px] text-emerald-400 font-bold uppercase tracking-wider">Excellent</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <p className="text-slate-400 text-base md:text-xl font-medium leading-relaxed mb-8 md:mb-10 max-w-xl animate-fade-in opacity-0 [animation-delay:300ms] [animation-fill-mode:forwards] text-balance">
                         We leverage advanced consumer laws to delete negative items and build positive history. Most clients see results in as little as 35 days.
                     </p>
@@ -101,7 +129,7 @@ const Hero: React.FC = () => {
                 </div>
 
                 {/* Right Column: High-End Visuals */}
-                <div className="lg:col-span-5 relative block mt-8 lg:mt-0 animate-fade-in opacity-0 [animation-delay:400ms] [animation-fill-mode:forwards]">
+                <div className="lg:col-span-5 relative hidden lg:block animate-fade-in opacity-0 [animation-delay:400ms] [animation-fill-mode:forwards]">
                     <div className="relative z-20 w-full px-4 md:px-0">
 
                         {/* Main Image Container */}
