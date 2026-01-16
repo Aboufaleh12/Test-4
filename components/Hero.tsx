@@ -102,30 +102,30 @@ const Hero: React.FC = () => {
                         </a>
                     </div>
 
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 border-t border-white/5 pt-6 md:pt-8 w-full animate-fade-in opacity-0 [animation-delay:500ms] [animation-fill-mode:forwards]">
-                        <div className="flex items-center gap-2 group justify-center md:justify-start">
-                            <div className="p-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 group-hover:bg-emerald-500/20 transition-colors">
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-6 border-t border-white/5 pt-8 w-full animate-fade-in opacity-0 [animation-delay:500ms] [animation-fill-mode:forwards]">
+                        <div className="flex items-center gap-3 group">
+                            <div className="p-2 rounded-lg bg-emerald-500/5 border border-emerald-500/10 group-hover:bg-emerald-500/10 transition-colors">
                                 <CheckCircle2 className="w-4 h-4 text-emerald-500" />
                             </div>
-                            <span className="text-slate-400 text-[10px] md:text-xs font-bold uppercase tracking-wider">No Results, No Fee</span>
+                            <span className="text-slate-400 text-xs font-bold uppercase tracking-wider">No Results, No Fee</span>
                         </div>
-                        <div className="flex items-center gap-2 group justify-center md:justify-start">
-                            <div className="p-1.5 rounded-lg bg-blue-500/10 border border-blue-500/20 group-hover:bg-blue-500/20 transition-colors">
+                        <div className="flex items-center gap-3 group">
+                            <div className="p-2 rounded-lg bg-blue-500/5 border border-blue-500/10 group-hover:bg-blue-500/10 transition-colors">
                                 <ShieldCheck className="w-4 h-4 text-blue-500" />
                             </div>
-                            <span className="text-slate-400 text-[10px] md:text-xs font-bold uppercase tracking-wider">FCRA Compliant</span>
+                            <span className="text-slate-400 text-xs font-bold uppercase tracking-wider">FCRA Compliant</span>
                         </div>
-                        <div className="flex items-center gap-2 group justify-center md:justify-start">
-                            <div className="p-1.5 rounded-lg bg-amber-500/10 border border-amber-500/20 group-hover:bg-amber-500/20 transition-colors">
+                        <div className="flex items-center gap-3 group">
+                            <div className="p-2 rounded-lg bg-amber-500/5 border border-amber-500/10 group-hover:bg-amber-500/10 transition-colors">
                                 <Zap className="w-4 h-4 text-amber-500" />
                             </div>
-                            <span className="text-slate-400 text-[10px] md:text-xs font-bold uppercase tracking-wider">Fast Disputes</span>
+                            <span className="text-slate-400 text-xs font-bold uppercase tracking-wider">Fast Disputes</span>
                         </div>
-                        <div className="flex items-center gap-2 group justify-center md:justify-start">
-                            <div className="p-1.5 rounded-lg bg-purple-500/10 border border-purple-500/20 group-hover:bg-purple-500/20 transition-colors">
+                        <div className="flex items-center gap-3 group">
+                            <div className="p-2 rounded-lg bg-purple-500/5 border border-purple-500/10 group-hover:bg-purple-500/10 transition-colors">
                                 <TrendingUp className="w-4 h-4 text-purple-500" />
                             </div>
-                            <span className="text-slate-400 text-[10px] md:text-xs font-bold uppercase tracking-wider">Score Tracking</span>
+                            <span className="text-slate-400 text-xs font-bold uppercase tracking-wider">Score Tracking</span>
                         </div>
                     </div>
                 </div>
