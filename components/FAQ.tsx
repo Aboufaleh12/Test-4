@@ -29,7 +29,7 @@ const FAQ: React.FC = () => {
             Frequently asked <span className="text-primary">questions</span>
           </h2>
           <p className="text-lg text-slate-500 font-medium max-w-xl mx-auto leading-relaxed">
-            Can't find the answer you're looking for? Reach out to our support team directly.
+            Find quick answers to common questions about our services, process, and overall dedicated client support team.
           </p>
         </div>
 
@@ -41,8 +41,8 @@ const FAQ: React.FC = () => {
               <div
                 key={index}
                 className={`group rounded-2xl transition-all duration-300 border ${isOpen
-                    ? 'bg-white border-blue-500/30 shadow-[0_10px_40px_-10px_rgba(37,99,235,0.1)]'
-                    : 'bg-[#F8FAFC] border-transparent hover:bg-white hover:border-slate-200'
+                  ? 'bg-white border-blue-500/30 shadow-[0_10px_40px_-10px_rgba(37,99,235,0.1)]'
+                  : 'bg-[#F8FAFC] border-transparent hover:bg-white hover:border-slate-200'
                   }`}
               >
                 <button
@@ -53,8 +53,8 @@ const FAQ: React.FC = () => {
                     {faq.question}
                   </span>
                   <span className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 border ${isOpen
-                      ? 'bg-primary border-primary text-white rotate-180'
-                      : 'bg-white border-slate-200 text-slate-400 group-hover:border-primary group-hover:text-primary'
+                    ? 'bg-primary border-primary text-white rotate-180'
+                    : 'bg-white border-slate-200 text-slate-400 group-hover:border-primary group-hover:text-primary'
                     }`}>
                     {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                   </span>
