@@ -28,8 +28,8 @@ const FAQ: React.FC = () => {
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
             Frequently asked <span className="text-primary">questions</span>
           </h2>
-          <p className="text-lg text-slate-500 font-medium max-w-xl mx-auto leading-relaxed">
-            Find quick answers to common questions about our services
+          <p className="text-lg text-slate-500 font-medium max-w-2xl mx-auto leading-relaxed">
+            Find quick answers to common questions about our services, process, and overall dedicated client support team.
           </p>
         </div>
 
