@@ -29,7 +29,7 @@ const FAQ: React.FC = () => {
             Frequently asked <span className="text-primary">questions</span>
           </h2>
           <p className="text-lg text-slate-500 font-medium max-w-xl mx-auto leading-relaxed">
-            Find quick answers to common questions about our services, process, and overall dedicated client support team.
+            Find quick answers to common questions about our services
           </p>
         </div>
 
