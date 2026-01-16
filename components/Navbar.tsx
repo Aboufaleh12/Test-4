@@ -64,7 +64,7 @@ const Navbar: React.FC = () => {
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 border-b ${scrolled
-        ? 'bg-slate-900 md:bg-dark/80 backdrop-blur-xl border-white/5 py-4 shadow-lg'
+        ? 'bg-dark md:bg-dark/80 backdrop-blur-xl border-white/5 py-4 shadow-lg'
         : 'bg-transparent border-transparent py-4 md:py-6'
         }`}
     >
@@ -128,11 +128,11 @@ const Navbar: React.FC = () => {
 
       {/* Modern Premium Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 bg-slate-900/98 backdrop-blur-xl z-40 transition-all duration-500 md:hidden flex flex-col ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
+        className={`fixed inset-0 bg-dark/98 backdrop-blur-xl z-40 transition-all duration-500 md:hidden flex flex-col ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
           }`}
       >
         {/* Radial Gradient Background - Simplified */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-900 to-slate-800 pointer-events-none opacity-50"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark to-slate-800 pointer-events-none opacity-50"></div>
 
         <div className="layout-container flex flex-col h-full relative z-10 pt-28 pb-8">
 
