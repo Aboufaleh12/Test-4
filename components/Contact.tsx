@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { CheckCircle2, Lock, ShieldCheck, ArrowRight, Sparkles, MessageSquare } from 'lucide-react';
-import ChatWidget from './ChatWidget';
+
 
 const Contact: React.FC = () => {
-  const [isChatOpen, setIsChatOpen] = useState(false);
+  // const [isChatOpen, setIsChatOpen] = useState(false); // Removed Chat Bot
 
   return (
     <section id="contact" className="section-spacing bg-white relative overflow-hidden">
@@ -28,13 +28,6 @@ const Contact: React.FC = () => {
               <h3 className="text-2xl font-bold text-slate-900 mb-2">Get Your Free Analysis</h3>
               <div className="flex items-center justify-center gap-2 text-sm">
                 <span className="text-slate-500">No obligation. No impact to score.</span>
-                <span className="hidden md:block w-1 h-1 bg-slate-300 rounded-full"></span>
-                <button
-                  onClick={() => setIsChatOpen(true)}
-                  className="text-primary font-bold hover:underline hidden md:flex items-center gap-1"
-                >
-                  <MessageSquare className="w-3.5 h-3.5" /> Chat Live
-                </button>
               </div>
             </div>
 
@@ -121,15 +114,7 @@ const Contact: React.FC = () => {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
 
-              {/* Mobile Only Chat Button */}
-              <button
-                type="button"
-                onClick={() => setIsChatOpen(true)}
-                className="md:hidden w-full mt-3 py-4 text-primary font-bold border border-primary/20 rounded-xl hover:bg-primary/5 transition-colors flex items-center justify-center gap-2"
-              >
-                <MessageSquare className="w-5 h-5" />
-                Chat with an Agent
-              </button>
+
             </form>
 
             {/* Trust Badge Below CTA */}
@@ -155,8 +140,7 @@ const Contact: React.FC = () => {
         </div>
       </div>
 
-      {/* Integrated Chat Widget */}
-      <ChatWidget isOpen={isChatOpen} onToggle={() => setIsChatOpen(!isChatOpen)} />
+
     </section>
   );
 };
