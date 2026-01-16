@@ -132,19 +132,6 @@ const Hero: React.FC = () => {
                             </div>
                         </div>
 
-                        {/* Floating Micro-UI 1: Real-time Deletion */}
-                        <div className="absolute -right-8 top-[15%] bg-slate-900/90 backdrop-blur-2xl border border-white/10 p-5 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] animate-[float_8s_ease-in-out_infinite] z-30 group hover:border-emerald-500/50 transition-colors">
-                            <div className="flex items-center gap-4">
-                                <div className="w-12 h-12 rounded-2xl bg-emerald-500/20 flex items-center justify-center border border-emerald-500/20 group-hover:scale-110 transition-transform">
-                                    <Zap className="w-6 h-6 text-emerald-400" />
-                                </div>
-                                <div>
-                                    <p className="text-[10px] text-slate-500 uppercase font-extrabold tracking-widest">Recent Action</p>
-                                    <p className="text-white font-bold text-sm">Collection Deleted</p>
-                                </div>
-                            </div>
-                        </div>
-
                         {/* Floating Micro-UI 2: Credit Score Gauge */}
                         <div className="absolute -left-12 bottom-[20%] bg-white/10 backdrop-blur-2xl border border-white/10 p-6 rounded-[2rem] shadow-[0_30px_60px_rgba(0,0,0,0.5)] animate-[float_6s_ease-in-out_infinite_1s] z-30">
                             <div className="flex flex-col items-center gap-1">
