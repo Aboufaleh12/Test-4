@@ -12,6 +12,18 @@ const Hero: React.FC = () => {
                 <div className="absolute top-[20%] -right-[10%] w-[800px] h-[800px] bg-indigo-600/10 rounded-full blur-[140px] opacity-40"></div>
                 <div className="absolute bottom-[-20%] left-[20%] w-[700px] h-[700px] bg-sky-500/10 rounded-full blur-[140px] opacity-30"></div>
 
+                {/* Animated Neon Globe / Abstract Motion */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] md:w-[900px] md:h-[900px] opacity-30 mix-blend-screen">
+                    {/* Ring 1 - Vertical Slow Spin */}
+                    <div className="absolute inset-0 border border-emerald-500/30 rounded-full animate-[spin_20s_linear_infinite]"></div>
+                    {/* Ring 2 - Horizontal Tilted Spin */}
+                    <div className="absolute inset-10 border border-blue-500/30 rounded-full animate-[spin_15s_linear_infinite_reverse]" style={{ transform: 'rotateX(60deg)' }}></div>
+                    {/* Ring 3 - Inner Core */}
+                    <div className="absolute inset-32 border-2 border-indigo-400/20 rounded-full animate-[pulse_4s_ease-in-out_infinite] shadow-[0_0_50px_rgba(99,102,241,0.2)]"></div>
+                    {/* Ring 4 - Cross Axis */}
+                    <div className="absolute inset-0 border border-cyan-400/20 rounded-full animate-[spin_25s_linear_infinite]" style={{ transform: 'rotateY(45deg)' }}></div>
+                </div>
+
                 {/* Texture & Pattern */}
                 <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.05] mix-blend-overlay"></div>
                 <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px)', backgroundSize: '48px 48px' }}></div>
