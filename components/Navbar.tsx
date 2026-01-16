@@ -43,15 +43,32 @@ const Navbar: React.FC = () => {
     return () => sections.forEach((section) => observer.unobserve(section));
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const targetId = href.replace('#', '');
     const element = document.getElementById(targetId);
 
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      // Small timeout to allow menu to close before scrolling
+      setIsOpen(false);
+      setTimeout(() => {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      setIsOpen(false);
     }
-    setIsOpen(false);
   };
 
   const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -128,11 +145,11 @@ const Navbar: React.FC = () => {
 
       {/* Modern Premium Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 bg-dark/98 backdrop-blur-xl z-40 transition-all duration-500 md:hidden flex flex-col ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
+        className={`fixed inset-0 h-[100dvh] bg-dark z-40 transition-all duration-500 md:hidden flex flex-col ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
           }`}
       >
-        {/* Radial Gradient Background - Simplified */}
-        <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark to-slate-800 pointer-events-none opacity-50"></div>
+        {/* Simple Gradient Accent */}
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent pointer-events-none opacity-40"></div>
 
         <div className="layout-container flex flex-col h-full relative z-10 pt-28 pb-8">
 
