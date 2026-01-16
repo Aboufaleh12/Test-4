@@ -101,7 +101,7 @@ const Hero: React.FC = () => {
                 </div>
 
                 {/* Right Column: High-End Visuals */}
-                <div className="lg:col-span-5 relative hidden lg:block animate-fade-in opacity-0 [animation-delay:400ms] [animation-fill-mode:forwards]">
+                <div className="lg:col-span-5 relative block mt-12 lg:mt-0 animate-fade-in opacity-0 [animation-delay:400ms] [animation-fill-mode:forwards]">
                     <div className="relative z-20 w-full">
 
                         {/* Main Image Container */}
@@ -140,7 +140,7 @@ const Hero: React.FC = () => {
                                         <circle className="text-white/10" strokeWidth="8" stroke="currentColor" fill="transparent" r="40" cx="50" cy="50" />
                                         <circle className="text-emerald-500" strokeWidth="8" strokeDasharray="251" strokeDashoffset="50" strokeLinecap="round" stroke="currentColor" fill="transparent" r="40" cx="50" cy="50" />
                                     </svg>
-                                    <span className="absolute text-xl font-black text-white">752</span>
+                                    <span className="absolute text-xl font-black text-white">710</span>
                                 </div>
                                 <span className="text-[10px] font-black text-emerald-400 uppercase tracking-[0.2em] mt-2">Excellent</span>
                             </div>
