@@ -112,41 +112,68 @@ const Navbar: React.FC = () => {
           </a>
         </div>
 
-        {/* Mobile Toggle - Refined & Fixed */}
+        {/* Refined Mobile Toggle Button */}
         <button
-          className="md:hidden text-white p-2.5 relative z-[60] bg-white/10 backdrop-blur-md border border-white/10 rounded-full active:scale-95 transition-all"
+          className={`md:hidden p-2.5 relative z-[60] rounded-full active:scale-95 transition-all duration-300 border border-white/10 ${isOpen ? 'bg-white/10 text-white shadow-none' : 'bg-white/5 backdrop-blur-md text-white shadow-lg'
+            }`}
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
-          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          <div className="relative w-6 h-6 flex items-center justify-center">
+            <X className={`w-6 h-6 absolute transition-all duration-300 ${isOpen ? 'rotate-0 opacity-100 scale-100' : '-rotate-90 opacity-0 scale-50'}`} />
+            <Menu className={`w-6 h-6 absolute transition-all duration-300 ${isOpen ? 'rotate-90 opacity-0 scale-50' : 'rotate-0 opacity-100 scale-100'}`} />
+          </div>
         </button>
       </div>
 
-      {/* Mobile Menu Overlay */}
+      {/* Modern Premium Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 bg-dark/95 backdrop-blur-xl z-40 transition-all duration-500 md:hidden flex flex-col items-center justify-center gap-8 ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
+        className={`fixed inset-0 bg-[#0F172A] z-40 transition-all duration-500 md:hidden flex flex-col ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
           }`}
       >
-        {NAV_LINKS.map((link, idx) => (
-          <a
-            key={link.name}
-            href={link.href}
-            onClick={(e) => handleNavClick(e, link.href)}
-            className={`text-2xl font-bold transition-all ${activeSection === link.href.substring(1) ? 'text-secondary scale-110' : 'text-white hover:text-secondary'
-              } ${isOpen ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}
-            style={{ transitionDelay: `${idx * 75}ms` }}
-          >
-            {link.name}
-          </a>
-        ))}
-        <a
-          href="tel:+19999999999"
-          className={`mt-4 px-8 py-4 bg-secondary text-slate-900 text-lg font-bold rounded-full flex items-center gap-2 ${isOpen ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}
-          style={{ transitionDelay: '500ms' }}
-        >
-          <Phone className="w-5 h-5" />
-          +1 999-999-9999
-        </a>
+        {/* Radial Gradient Background */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-blue-900/20 via-slate-900/0 to-slate-900/0 pointer-events-none"></div>
+
+        <div className="layout-container flex flex-col h-full relative z-10 pt-28 pb-8">
+
+          {/* Header Row (Logo Inside Menu) */}
+          <div className="flex items-center gap-2 mb-12 opacity-80">
+            <div className="w-8 h-8 bg-gradient-to-br from-primary to-primaryDark rounded-lg flex items-center justify-center text-white">
+              <BarChart2 className="w-4 h-4" />
+            </div>
+            <span className="text-lg font-bold text-white tracking-tight">Navigation</span>
+          </div>
+
+          {/* Staggered Navigation List */}
+          <div className="flex flex-col gap-6">
+            {NAV_LINKS.map((link, idx) => (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
+                className={`text-3xl font-bold tracking-tight py-2 transition-all duration-500 ease-out flex items-center gap-4 ${activeSection === link.href.substring(1) ? 'text-secondary translate-x-4' : 'text-slate-300 hover:text-white hover:translate-x-2'
+                  } ${isOpen ? 'translate-x-0 opacity-100' : '-translate-x-8 opacity-0'}`}
+                style={{ transitionDelay: `${100 + (idx * 50)}ms` }}
+              >
+                {link.name}
+                {activeSection === link.href.substring(1) && (
+                  <div className="w-2 h-2 rounded-full bg-secondary animate-pulse"></div>
+                )}
+              </a>
+            ))}
+          </div>
+
+          {/* Bottom CTA */}
+          <div className={`mt-auto transition-all duration-700 delay-500 ${isOpen ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+            <a
+              href="tel:+19999999999"
+              className="w-full py-5 bg-gradient-to-r from-secondary to-amber-300 text-slate-900 text-lg font-bold rounded-2xl flex items-center justify-center gap-3 shadow-xl shadow-amber-400/10 active:scale-95 transition-transform"
+            >
+              <Phone className="w-5 h-5" />
+              <span>Call Now: (999) 999-9999</span>
+            </a>
+          </div>
+        </div>
       </div>
     </nav>
   );
